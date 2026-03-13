@@ -7,7 +7,7 @@ No fue usada como reemplazo del criterio de QA, la priorización ni la revisión
 
 ## Herramientas de IA Utilizadas
 
-- ChatGPT / asistente de código para:
+- ChatGPT / Codex para:
   - redactar scaffolding inicial de tests en Playwright
   - generar estructura inicial de documentación en Markdown
   - acelerar redacción de documentos de estrategia, alcance y hallazgos
@@ -52,8 +52,3 @@ Las decisiones centrales de QA fueron tomadas manualmente, incluyendo:
 - cómo balancear valor, velocidad y mantenibilidad
 - qué riesgos eran suficientemente relevantes para documentar
 - cómo presentar la solución de forma clara para un reviewer
-
-## Nota Final
-
-La IA aportó velocidad y estructura, pero el entregable final refleja revisión manual, adaptación y decisiones de priorización QA tomadas por mi.  
-La intención fue usar la IA como herramienta de productividad, manteniendo la responsabilidad sobre la precisión técnica, la relevancia y la selección de alcance en manos del autor.
