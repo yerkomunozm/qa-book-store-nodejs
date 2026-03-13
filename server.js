@@ -1,6 +1,11 @@
+const fs = require('fs');
 const path = require('path');
-const configFilePath = path.join('/opt/nil1729/book-store-app/backend.env');
-require('dotenv').config({ path: configFilePath });
+
+const localEnvPath = path.join(__dirname, '.env');
+//const legacyEnvPath = path.join('/opt/nil1729/book-store-app/backend.env');
+const resolvedEnvPath = fs.existsSync(localEnvPath) ? localEnvPath : legacyEnvPath;
+
+require('dotenv').config({ path: resolvedEnvPath });
 
 const express = require('express');
 const app = express();
@@ -13,9 +18,9 @@ require('./config/passport')(passport);
 
 app.use(
   session({
-    secret: process.env.SESSION_SECRET,
-    resave: true,
-    saveUninitialized: true
+    name: 'book-store-session',
+    keys: [process.env.SESSION_SECRET || 'dev-session-secret'],
+    maxAge: 24 * 60 * 60 * 1000
   })
 );
 app.use(methodOverride('_method'));
